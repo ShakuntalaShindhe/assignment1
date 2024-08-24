@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Javascript Assignment</h4>
+</body>
+<script>
+    //1.Js Program on Fibanacci series(0+1=1,1+1=2,1+2=3,2+3=5,3+5=8........)
+    function fibonacci(n) {
+    if (n <= 1) {
+        return n;
+    }else{
+    return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+}
+console.log(fibonacci(0))
+console.log(fibonacci(1))
+console.log(fibonacci(2))
+console.log(fibonacci(5))
+console.log(fibonacci(6))
+console.log(fibonacci(7))
+console.log(fibonacci(8))
+console.log('===========')
+//2 Write a JS program to convert temparature from celsius to Fahrenheit
+function Fahrenheit(celcius){
+    return ((celcius * 9.0 / 5.0) + 32.0);
+}
+let celcius=prompt('Enter a ºC that is to be converted into ºF')
+console.log(Fahrenheit(celcius))
+
+console.log('==========')
+//3.Write JS program to find square root of number
+function squareroot(a){
+   if(a==0 && a==1){
+    return a
+   }else{
+    return a=Math.sqrt(a)
+   }
+}
+console.log(squareroot(1))
+console.log(squareroot(9))
+console.log(squareroot(81))
+
+console.log('============')
+//4.Write a JS program to generate a random interger between two given numbers
+function numbers(num1,num2){
+    return Math.floor(Math.random()*(num2-num1+1))+num1
+}
+let RandomNum=numbers(1,6)
+console.log(RandomNum)
+
+console.log('============')
+//5.Write JS program to check if the passed string is palindrome
+
+function Palindrome(str) {
+   str=str.toLowerCase()
+    for (let i = 0; i < str ; i++) {
+        if (str[i] !== str[str.length - i - 1]) {
+            return false;
+        }
+    }
+    return true;
+}
+let string1 = prompt("Enter a string:");
+if (Palindrome(string1)) {
+    console.log(string1+' '+'is a palindrome')
+} else {
+    console.log(string1+' '+'is not a palindrome');
+}
+</script>
+</html>
